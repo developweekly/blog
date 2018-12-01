@@ -20,6 +20,8 @@ We'll start with creating a new site with a very basic template. Then we'll add 
 
 In this tutorial, commands that you enter will start with the "$" prompt. The output will follow. Lines that start with "#" are comments that I've added to explain a point. When I show updates to a file, the ":wq" on the last line means to save the file.
 
+<script id="asciicast-zVENs2MNobPZYhB6T4vQgvM20" src="https://asciinema.org/a/zVENs2MNobPZYhB6T4vQgvM20.js" async></script>
+
 Here's an example:
 
 ```
