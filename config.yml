@@ -1,7 +1,7 @@
 # hugo server --themesDir ...
 
-baseURL: https://example.com
-title: Hugo Book
+baseURL: https://developweekly.com
+title: developweekly
 theme: book
 
 # Book configuration
