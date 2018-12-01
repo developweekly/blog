@@ -1,50 +1,20 @@
-baseURL = "https://developweekly.com"
+# hugo server --themesDir ...
 
-languageCode = "en-us"
-DefaultContentLanguage = "en"
-title = "developweekly"
-theme = "techdoc"
+baseURL: https://developweekly.com
+title: developweekly
+theme: hugo-book
 
-hasCJKLanguage = true
-metaDataFormat = "yaml"
+# Book configuration
+disablePathToLower: true
 
-pygmentsUseClasses = true
-pygmentsCodefences = true
+params:
+  # show or hide table of contents for page
+  BookShowToC: true
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir= false
-enableMissingTranslationPlaceholders = false
+  # Set bundle to render side menu
+  # if not specified file structure and weights will be used
+  BookMenuBundle: /sidebar
 
-[Params]
-
-    # Souce Code repository section
-    description = "technical challenges of my simple life"
-    github_repository = "https://github.com/developweekly/blog"
-    # version = "0.2.0"
-
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/developweekly/blog"
-
-    # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification
-
-    # Theme settings section
-    dateformat = "" # default "2 Jan 2006"
-
-    # path name excluded from documentation menu
-    menu_exclusion = ["archives", "blog", "entry", "post", "posts"]
-
-
-# Global menu section
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/developweekly"
-    weight = 2
+  # specify section of content to render as menu
+  # if bookMenuBundle is not set, 'docs' is value by default
+  BookSection: blog
