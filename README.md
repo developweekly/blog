@@ -1,2 +1,4 @@
-# blog
+blog
+---
+
 https://developweekly.com
