@@ -41,7 +41,7 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed vi
 # Twitter Feed
 
 <!-- twitter-timeline -->
-<div style="max-width: 588px;">
+<!-- <div style="max-width: 588px;"> -->
 	<a class="twitter-timeline"
 		data-lang="en"
 		data-width="100%"
@@ -49,4 +49,4 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed vi
 	>
 		Tweets by developweekly
 	</a>
-</div>
+<!-- </div> -->
