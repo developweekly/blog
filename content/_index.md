@@ -1,6 +1,7 @@
 ---
 title: "developweekly"
 type: docs
+bookShowTwitterFeed: true
 ---
 
 # Hello!
