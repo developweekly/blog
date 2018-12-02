@@ -3,8 +3,9 @@
   {{ if and ($showToC) (.Page.TableOfContents) }}
   <aside class="book-toc fixed">
     {{ .Page.TableOfContents }}
-    {{ if ($showTwitterFeed) }}
-    <div style="max-width: 300px; margin-top: 175px;"><a class="twitter-timeline" data-lang="en" data-width="100%" href="https://twitter.com/developweekly?ref_src=twsrc%5Etfw">Tweets by developweekly</a><div>
   </aside>
+  {{ else }}
+    {{ if ($showTwitterFeed) }}
+    <div style="max-width: 300px; margin-top: 32px;"><a class="twitter-timeline" data-lang="en" data-width="100%" href="https://twitter.com/developweekly?ref_src=twsrc%5Etfw">Tweets by developweekly</a><div>
+    {{ end }}
   {{ end }}
-{{ end }}
