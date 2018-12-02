@@ -1,8 +1,6 @@
 ---
 title: "developweekly"
 type: docs
-bookShowToC: false
-bookShowTwitterFeed: true
 ---
 
 # Hello!
@@ -39,3 +37,13 @@ Here you will find technical challenges of my simple life about Python, Linux, c
 I try to keep things simple to follow, up to date with continuous modifications, reproducible at least on one popular linux distribution, i.e. Ubuntu server.
 
 This blog is generated with [Hugo](https://gohugo.io/), continuously deployed via [Netlify](https://www.netlify.com/) and hosted on [https://github.com/developweekly/blog](https://github.com/developweekly/blog).
+
+# Latest Posts
+
+**Dec 1, 2018** [Network File System (NFS)]({{< ref "/docs/setting-up-nfs.md" >}})
+
+**Jan 31, 2017** [HAProxy]({{< ref "/docs/haproxy-load-balancing-and-subdomain-port-redirection.md" >}})
+
+**Jan 27, 2017** [Redis]({{< ref "/docs/redis.md" >}})
+
+**Jan 23, 2017** [moment.js]({{< ref "/docs/moment-js.md" >}})
