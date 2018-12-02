@@ -40,13 +40,10 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed vi
 
 # Twitter Feed
 
-<!-- twitter-timeline -->
-<!-- <div style="max-width: 588px;"> -->
-	<a class="twitter-timeline"
+<a class="twitter-timeline"
 		data-lang="en"
 		data-width="100%"
 		href="https://twitter.com/developweekly?ref_src=twsrc%5Etfw"
 	>
 		Tweets by developweekly
 	</a>
-<!-- </div> -->
