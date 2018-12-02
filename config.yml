@@ -4,6 +4,8 @@ baseURL: https://developweekly.com
 title: developweekly
 theme: book
 
+pygmentsCodeFences: true
+
 # Book configuration
 disablePathToLower: true
 
@@ -13,7 +15,7 @@ params:
 
   # Set bundle to render side menu
   # if not specified file structure and weights will be used
-  BookMenuBundle: /menu  
+  BookMenuBundle: /menu
 
   # specify section of content to render as menu
   # if bookMenuBundle is not set, 'docs' is value by default
