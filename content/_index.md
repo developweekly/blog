@@ -37,16 +37,3 @@ Here you will find technical challenges of my simple life about Python, Linux, c
 I try to keep things simple to follow, up to date with continuous modifications, reproducible at least on one popular linux distribution, i.e. Ubuntu server.
 
 This blog is generated with [Hugo](https://gohugo.io/), continuously deployed via [Netlify](https://www.netlify.com/) and hosted on [https://github.com/developweekly/blog](https://github.com/developweekly/blog).
-
-# Twitter Feed
-
-<!-- twitter-timeline -->
-<div style="max-width: 588px;">
-	<a class="twitter-timeline"
-		data-lang="en"
-		data-width="100%"
-		href="https://twitter.com/developweekly?ref_src=twsrc%5Etfw"
-	>
-		Tweets by developweekly
-	</a>
-<div>
