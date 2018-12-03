@@ -4,6 +4,9 @@ title: "Logical Volume Manager (LVM)"
 
 # Logical Volume Manager (LVM)
 
+**Dec 4, 2018**<!-- \ -->
+<!-- <sup>Last modified: **Dec 2, 2018**</sup> -->
+
 *"LVM stands for Logical Volume Management. It is a system of managing logical volumes, or filesystems, that is much more advanced and flexible than the traditional method of partitioning a disk into one or more segments and formatting that partition with a filesystem."*
 
 The only way to have a LVM file system on your entire system is a hard format. While installing Ubuntu Server, select partitioning method as *"Guided - use entire disk and set up LVM"*: https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server-1604#7
