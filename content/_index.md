@@ -40,6 +40,8 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Dec 4, 2018** [Logical Volume Manager (LVM)]({{< ref "/docs/lvm.md" >}})
+
 **Dec 1, 2018** [Network File System (NFS)]({{< ref "/docs/setting-up-nfs.md" >}})
 
 **Jan 31, 2017** [HAProxy]({{< ref "/docs/haproxy-load-balancing-and-subdomain-port-redirection.md" >}})
