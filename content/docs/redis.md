@@ -44,6 +44,7 @@ These are just about enough for your key-value storage purposes. For storing lis
 <ul>
 	<li>To push an item to the tail of a list:</li>
 </ul>
+
 ```python
 con.rpush("key", "item")
 ```
@@ -51,6 +52,7 @@ con.rpush("key", "item")
 <ul>
 	<li>To get the length of a list:</li>
 </ul>
+
 ```python
 con.llen("key")
 >> 1
@@ -59,6 +61,7 @@ con.llen("key")
 <ul>
 	<li>To insert an item to the head of a list:</li>
 </ul>
+
 ```python
 con.lpush("key", "otheritem")
 ```
@@ -66,6 +69,7 @@ con.lpush("key", "otheritem")
 <ul>
 	<li>To get the list, i.e. for looping throug it (from head to tail, that's what 0 & -1 stand for):</li>
 </ul>
+
 ```python
 con.lrange("key", 0, -1)
 >> ["otheritem", "item"]
