@@ -38,12 +38,12 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
-**Dec 4, 2018** [Logical Volume Manager (LVM)]("docs/lvm.md")
+**Dec 4, 2018** [Logical Volume Manager (LVM)](content/docs/lvm.md)
 
-**Dec 1, 2018** [Network File System (NFS)]("docs/setting-up-nfs.md")
+**Dec 1, 2018** [Network File System (NFS)](content/docs/setting-up-nfs.md)
 
-**Jan 31, 2017** [HAProxy]("docs/haproxy-load-balancing-and-subdomain-port-redirection.md")
+**Jan 31, 2017** [HAProxy](content/docs/haproxy-load-balancing-and-subdomain-port-redirection.md)
 
-**Jan 27, 2017** [Redis]("docs/redis.md")
+**Jan 27, 2017** [Redis](content/docs/redis.md)
 
-**Jan 23, 2017** [moment.js]("docs/moment-js.md")
+**Jan 23, 2017** [moment.js](content/docs/moment-js.md)
