@@ -38,6 +38,8 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Dec 15, 2018** [Distributed Replicated Block Device (DRBD)](content/docs/drbd.md)
+
 **Dec 4, 2018** [Logical Volume Manager (LVM)](content/docs/lvm.md)
 
 **Dec 1, 2018** [Network File System (NFS)](content/docs/setting-up-nfs.md)
