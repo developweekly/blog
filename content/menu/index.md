@@ -9,6 +9,9 @@ headless: true
  - [Logical Volume Manager (LVM)]({{< ref "/docs/lvm.md" >}})
  - [Distributed Replicated Block Device (DRBD)]({{< ref "/docs/drbd.md" >}})
 
+- **Clustering**
+ - [Highly Available NFS Server with Pacemaker & DRBD]({{< ref "/docs/pacemaker.md" >}})
+
 - **Networking**
  - [HAProxy]({{< ref "/docs/haproxy-load-balancing-and-subdomain-port-redirection.md" >}})
 

@@ -43,6 +43,8 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Dec 16, 2018** [Highly Available NFS Server with Pacemaker & DRBD]({{< ref "/docs/pacemaker.md" >}})
+
 **Dec 15, 2018** [Distributed Replicated Block Device (DRBD)]({{< ref "/docs/drbd.md" >}})
 
 **Dec 4, 2018** [Logical Volume Manager (LVM)]({{< ref "/docs/lvm.md" >}})
