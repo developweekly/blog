@@ -1,5 +1,5 @@
 ---
-title: "drbd"
+title: "Distributed Replicated Block Device (DRBD)"
 ---
 
 # Distributed Replicated Block Device (DRBD)

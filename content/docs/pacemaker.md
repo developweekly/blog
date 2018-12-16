@@ -1,5 +1,5 @@
 ---
-title: "pacemaker"
+title: "Highly Available NFS Server with Pacemaker & DRBD"
 ---
 
 # Highly Available NFS Server with Pacemaker & DRBD
