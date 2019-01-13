@@ -32,6 +32,12 @@ type: docs
   <a href="https://linkedin.com/in/safakulug" style="margin-right: 16px">
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" style="fill:#0077B5;"/></svg>
   </a>
+  <a title="Instagram" href="https://instagram.com/developweekly" style="margin-right: 16px"> 
+    <img width="32" alt="Instagram simple icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Instagram_simple_icon.svg/512px-Instagram_simple_icon.svg.png" style="vertical-align: initial;">
+  </a>
+  <a title="twitch" href="https://www.twitch.tv/developweekly" style="margin-right: 16px"> 
+<svg style="fill: white; background-color: #6441a4;" class="tw-animated-glitch-logo__svg" overflow="visible" width="32px" height="32px" version="1.1" viewBox="0 0 30 30" x="0px" y="0px"><path d="M4,7 L5.56799,3 L27,3 L27,18 L21,24 L16,24 L12.88599,27 L9,27 L9,24 L4,24 L4,7 Z M21,20 L25,16 L25,5 L8,5 L8,20 L12,20 L12,23 L15,20 L21,20 Z"></path><polygon class="tw-animated-glitch-logo__right-eye" points="21 9 19 9 19 15 21 15"></polygon><polygon class="tw-animated-glitch-logo__left-eye" points="16 9 14 9 14 15 16 15"></polygon></svg>
+</a>
 
 I'm Safak, a software developer working at a fintech startup in Istanbul, Turkey.
 
