@@ -38,6 +38,8 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Jan 13, 2019** [Your First Dockerfile](content/docs/your-first-dockerfile.md)
+
 **Dec 16, 2018** [Highly Available NFS Server with Pacemaker & DRBD](content/docs/pacemaker.md)
 
 **Dec 15, 2018** [Distributed Replicated Block Device (DRBD)](content/docs/drbd.md)
