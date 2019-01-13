@@ -6,7 +6,7 @@ draft: false
 
 # Your First Dockerfile
 
-**Jan 13, 2019**\
+**Jan 13, 2019**
 <!-- <sup>Last modified: **Dec 2, 2018**</sup> -->
 
 I wrote this post last year on my no-longer-maintained steemit blog, but I will re-post it here anyway. After I've been spending a lot of time working on containers and swarm clusters, when I read it again, it looks very basic but this can be the first of many posts about Docker and containerization.
