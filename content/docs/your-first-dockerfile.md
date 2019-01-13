@@ -21,7 +21,7 @@ We will take a look at how to create a container from a docker configuration fil
 Many organizations have already official images for their products. They are available on Docker Store and can easily be inherited by your custom configurations.
 In my example, we will create an Ubuntu server container for Python development purposes. In order to follow the next steps, you must install Docker on your computer by simply following the official instructions.
 
-You just need to create a folder, create a text file under it and call it "Dockerfile". This is the default name docker uses to build an image when docker build command is executed within a folder. Now let's fill your Dockerfile. First, we will use the official Ubuntu base image. To inherit other images, you use the statement FROM.
+You just need to create a folder, create a text file under it and call it `Dockerfile`. This is the default name docker uses to build an image when docker build command is executed within a folder. Now let's fill your Dockerfile. First, we will use the official Ubuntu base image. To inherit other images, you use the statement `FROM`.
 
 ```dockerfile
 FROM ubuntu:latest
@@ -60,7 +60,7 @@ pip3 install pipenv
 ENV SHELL /bin/bash
 ```
 
-Pipenv requires SHELL environment variable so as you can guess, we define environment variables by ENV for our container. Now we will also set default locale for our container and our Dockerfile will be ready to be built.
+Pipenv requires SHELL environment variable so as you can guess, we define environment variables by `ENV` for our container. Now we will also set default locale for our container and our Dockerfile will be ready to be built.
 
 ```dockerfile
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
