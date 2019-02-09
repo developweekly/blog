@@ -49,6 +49,8 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Feb 9, 2019** [Your First Python Web Server]({{< ref "/docs/your-first-webserver.md" >}})
+
 **Jan 13, 2019** [Your First Dockerfile]({{< ref "/docs/your-first-dockerfile.md" >}})
 
 **Dec 16, 2018** [Highly Available NFS Server with Pacemaker & DRBD]({{< ref "/docs/pacemaker.md" >}})

@@ -1,14 +1,23 @@
 ---
-title: "Your First Python Tornado Webserver"
+title: "Your First Python Tornado Web Server"
 date: 2019-02-09T12:05:22+03:00
 ---
+
+# Your First Python Web Server
+
+**Feb 9, 2019**
+<!-- <sup>Last modified: **Dec 2, 2018**</sup> -->
 
 Through the on-boarding process of the internship in my company, we get a lot of questions from juniors. Since our company is a startup and our team is relatively small, we haven't prioritised creating an on-boarding documentation yet. The biggest question mark is always how the web works. What is a web server? On this blog post, which is going to be the first of a series, I will show how to set up a simple web server that handles a pair of HTTP requests in Python.
 
 `Tornado` is the Python module we are going to use. In order to install Python packages, you need to have Python installed - which you will have out of the box if you're using Linux - and a tool for installing Python packages (ie, pip or pipenv).
 
-I will be using Ubuntu and I encourage you to obtain any Linux distribution of your choice as well if you intend to code in Python. To install pip package manager:
+I will be using Ubuntu and I encourage you to obtain any Linux distribution of your choice as well if you intend to code in Python.
 
+
+# Install Tornado
+
+To install pip package manager:
 
 ```bash
 sudo apt-get install -y python-pip
@@ -20,6 +29,8 @@ And using pip, you can now install Tornado:
 ```bash
 pip install tornado
 ```
+
+# Hello World
 
 Now let's follow Tornado's `Hello, World` guide and create a simple application by modifying it a little bit. You can check the original sample application from: [http://www.tornadoweb.org/en/stable/#hello-world](http://www.tornadoweb.org/en/stable/#hello-world)
 
@@ -54,8 +65,11 @@ Here, on line with `def make_app():`, we are defining the routes of our applicat
 
 On line with `class HelloHandler`, we have defined a handler called `HelloHandler`, which is a class inheriting Tornado's `tornado.web.RequestHandler` class. In our handler, we define `get` and `post` methods. These methods will be called when an HTTP `GET` or `POST` request is made to our web server. In `get` method, we simply respond to the request with a friendly message, `Hello, world`. In `post` method we are expecting two arguments namely `username` and `password`. These are just arbitrary arguments and can be anything you like or nothing at all. And we respond to the request with the values of the arguments we receive.
 
-Finally, we are wrapping our web server and will be running it on port `8080` which is defined as `app.listen(8080)`. To run the web server, just save this file and then run this in shell:
+Finally, we are wrapping our web server and will be running it on port `8080` which is defined as `app.listen(8080)`.
 
+# Running
+
+To run the web server, just save this file and then run this in shell:
 
 ```bash
 python webserver.py
