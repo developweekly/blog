@@ -14,10 +14,9 @@ Through the on-boarding process of the internship in my company, we get a lot of
 
 I will be using Ubuntu and I encourage you to obtain any Linux distribution of your choice as well if you intend to code in Python.
 
-# Install tornado
+# Install Tornado
 
 To install pip package manager:
-
 
 ```bash
 sudo apt-get install -y python-pip
