@@ -2,10 +2,10 @@
 headless: true
 ---
 
-- **Containers**
+- **Container**
  - [Your First Dockerfile]({{< ref "/docs/your-first-dockerfile.md" >}}) 
 
-- **File Servers**
+- **File Server**
  - [Network File System (NFS)]({{< ref "/docs/setting-up-nfs.md" >}})
 
 - **Disk Management**
@@ -18,7 +18,10 @@ headless: true
 - **Networking**
  - [HAProxy]({{< ref "/docs/haproxy-load-balancing-and-subdomain-port-redirection.md" >}})
 
-- **Databases**
+- **Web Server**
+ - [Your First Python Web Server]({{< ref "/docs/your-first-webserver.md" >}})
+
+- **Database**
  - [Redis]({{< ref "/docs/redis.md" >}})
 
 - **Frontend**

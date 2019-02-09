@@ -1,5 +1,5 @@
 ---
-title: "Your First Python Tornado Webserver"
+title: "Your First Python Tornado Web Server"
 date: 2019-02-09T12:05:22+03:00
 ---
 
