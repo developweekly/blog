@@ -95,7 +95,7 @@ Now we can configure Gitlab server to listen TCP and HTTPS connections on those 
 
 Gitlab is deployed as a container, just as rest of the services. We will use Gitlab's official Docker image. Since the container will be run as a Docker service, we will create a docker-compose file and deploy it with `docker stack` command. We will do this manually right now since we don't have an automated CI/CD pipeline yet.
 
-```yaml
+```YAML
 version: '3.5'
 services:
   web:
@@ -193,7 +193,7 @@ For our setup, runners will also run as a container with a docker socket privile
 
 Runners can use different executors such as bash, docker etc. In our cluster every piece of code runs through docker so we will use docker executor. To be able to run docker commands in a container, we will also bind the docker socket to it. And finally, we will deploy a runner container on each nodes of our docker cluster, which means the service will be deployed in `global` mode.
 
-```yaml
+```YAML
 version: '3.5'
 services:
     runner:
@@ -228,7 +228,7 @@ Remember we wanted to be able to run docker commands in runners? That's why we w
 
 I suggest you to go ahead and try the interactive register command in runners, but you might as well sneak a peak to my non-interactive command here.
 
-```shell
+```bash
 docker exec -it $RUNNER_CONTAINER gitlab-runner register \
 --non-interactive \
 --docker-tlsverify \
@@ -253,11 +253,11 @@ Now let's get those runners working.
 
 # Your First .gitlab-ci.yml
 
-For a detailed configuration documentation, read [official docs](https://docs.gitlab.com/ee/ci/yaml/README.html).
+For a detailed configuration documentation, read [official docs](https://docs.gitlab.com/ee/ci/YAML/README.html).
 
 We deployed Gitlab manually, but we can let runners do the job for us. Keep the same `docker-stack.yml` we used for Gitlab, but add a `.gitlab-ci.yml` file as follows.
 
-```yaml
+```YAML
 image: docker:latest
 
 stages:
@@ -290,7 +290,7 @@ First, go to `gitlab` project page and create a new schedule under CI/CD / Sched
 
 Now we can add an update job to our `gitlab-ci.yml` configuration file.
 
-```yaml
+```YAML
 update:
   stage: update
   tags:
@@ -307,7 +307,7 @@ Remember that we defined our own `stages` in configuration such as `deploy, upda
 
 Similarly, we can add a backup job as well.
 
-```yaml
+```YAML
 backup:
   stage: backup
   tags:
