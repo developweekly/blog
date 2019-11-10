@@ -23,7 +23,7 @@ We use HAProxy as a reverse proxy, it handles all routing of traffic to and from
 
 Before we install Gitlab, let's configure the ports it will be served. I will cover only relevant parts of the configuration.
 
-To reserve ssh port on the host machine, we will use a different TCP port for SSH communications on Gitlab server.
+To reserve the default SSH port on the host machine, we will use a different TCP port for SSH communications on Gitlab server.
 
 ```haproxy
 frontend gitlab_ssh
@@ -87,7 +87,7 @@ Note that we also handle certificates on HAProxy, and won't be providing Gitlab 
 
 Gitlab is going to explode your HAProxy logs. If you want to filter them, you can add `set-log-level silent` on your https-frontend.
 
-We also use Gitlab Container registry for storing and serving all of our container images. It runs on a different domain `registry.algosis.com.tr` and on port `12557`. We also restricted its access on local subnet.
+We also use Gitlab Container Registry for storing and serving all of our container images. It runs on a different domain `registry.algosis.com.tr` and on port `12557`. We also restricted its access to a bunch of local subnets.
 
 Now we can configure Gitlab server to listen TCP and HTTPS connections on those ports.
 
@@ -167,7 +167,7 @@ volumes:
     external: true
 ```
 
-Now this is a lot to take in, so we better cover it peace by peace.
+Now this is a lot to take in, so we better cover it piece by piece.
 
 I think image, hostname and url parts are clear from haproxy configurations. Since we used a custom ssh port on HAProxy to reserve default ssh port on the host, we define it in `gitlab_rails['gitlab_shell_ssh_port'] = 2289`.
 
@@ -179,7 +179,7 @@ You can configure a SMTP server if you want Gitlab to notify you on some certain
 
 Web port and registry port is configured as aligned with those in HAProxy. Here the container port `8089` is linked to `80` so `nginx['listen_port'] = 80` and since HAProxy handles ssl certificates, `nginx['listen_https'] = false`. Don't worry, Gitlab is still configured to operate on an https domain. Similar configuration is applied for registry as well.
 
-We want to persist some folders such as logs, git data and configurations, so we define docker volumes (externally) before we deploy this as a service. Also some docker service placement restrictions, but these are optional for now.
+We want to persist some folders such as logs, git data and configurations, so we define docker volumes (externally) before we deploy this as a service. Also there are some docker service placement restrictions, but these are optional for now.
 
 Save the file as `docker-stack.yml` and deploy it with `docker stack deploy --compose-file docker-stack.yml gitlab` and you should be good to go. It would take a while since docker needs to pull the image from Docker Hub registry before deploying the service.
 
@@ -222,7 +222,7 @@ Now we have runner containers on each node but Gitlab and its runners are unawar
 
 Okay we now have bunch of Gitlab services running on our cluster. Next step is registering runner services to Gitlab so that it can start using them as pipeline workers. Again I strongly suggest you to read the official documentation for [registering runners](https://docs.gitlab.com/runner/register/#docker).
 
-We will invoke `register` command in runner containers, with some configuration. This command is actually interactive and very intuitive. It asks you a couple of questions to help you configure your runner. But we want everything to be automated and run through the pipeline so we might as well figure out a non-interactive way to do so. We will use same runners across all projects, so our runners will be `shared` runners. We also deployed runners on each node of our clusted, so we better `tag` them appropriately to identify the host runner is working on. We will use `docker` executor, and we need a base docker image for the containers runners will create during executing pipeline jobs. Wow, containers everywhere, right?
+We will invoke `register` command in runner containers, with some configuration. This command is actually interactive and very intuitive. It asks you a couple of questions to help you configure your runner. But we want everything to be automated and run through the pipeline so we might as well figure out a non-interactive way to do so. We will use same runners across all projects, so our runners will be `shared` runners. We also deployed runners on each node of our cluster, so we better `tag` them appropriately to identify the host runner is working on. We will use `docker` executor, and we need a base docker image for the containers runners will create during executing pipeline jobs. Wow, containers everywhere, right?
 
 Remember we wanted to be able to run docker commands in runners? That's why we will use official docker image for running docker in docker. In fact, it's called docker in docker (dind), and the image lies in [docker hub](https://hub.docker.com/_/docker). This docker image does not contain a lot of commands but for now it's sufficient. We'll later extend this image to add some capabilities such as running `docker-compose`.
 
@@ -243,7 +243,7 @@ docker exec -it $RUNNER_CONTAINER gitlab-runner register \
 --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 ```
 
-You can obtain your own registration token on Gitlab Admin panel under Overview/Runners section.
+You can obtain your own `registration-token` on Gitlab Admin panel under Overview/Runners section.
 
 As you add more projects, you are going to need multiple runners on your docker swarm nodes. You can register new runners with the same command we used.
 
@@ -253,7 +253,7 @@ Now let's get those runners working.
 
 # Your First .gitlab-ci.yml
 
-For a detailed configuration documentation, read [official docs](https://docs.gitlab.com/ee/ci/YAML/README.html).
+For a detailed configuration documentation, read [official docs](https://docs.gitlab.com/ee/ci/yaml/README.html).
 
 We deployed Gitlab manually, but we can let runners do the job for us. Keep the same `docker-stack.yml` we used for Gitlab, but add a `.gitlab-ci.yml` file as follows.
 
@@ -280,7 +280,7 @@ production:
     - schedules
 ```
 
-Create a new project called `gitlab` on your Gitlab instance. After committing and pushing configuration files to your project, a pipeline job should start running and when succeeded, your Gitlab container should be re-created, by Gitlab runners.
+Create a new project called `gitlab` on your Gitlab instance. After committing and pushing configuration files to your project, a pipeline job should start running and when succeeded, your Gitlab container should be re-created, by Gitlab runners. Note that we defined our own custom stages, and used our gitlab runner tag that we defined when registering runners.
 
 # Adding Self-Update and Backup Capabilities to Gitlab
 
@@ -303,7 +303,7 @@ update:
    - schedules
 ```
 
-Remember that we defined our own `stages` in configuration such as `deploy, update, backup`. Jobs will run in this order according to their stage, and jobs in the same stage will run parallel. We also don't want update job to be run on each commit, so we restrict it to be run only on `schedules`. Now you can test your schedule by playing play button on CI/CD / Schedules page.
+Remember that we defined our own `stages` in configuration such as `deploy, update, backup`. Jobs will run in this order according to their stage, and jobs in the same stage will run parallel. We also don't want update job to be run on each commit, so we restrict it to be run only on `schedules`. Now you can test your schedule by clicking play button on CI/CD / Schedules page.
 
 Similarly, we can add a backup job as well.
 
@@ -319,3 +319,5 @@ backup:
 ```
 
 We are filtering `gitlab_web` container and running `gitlab-backup` command on it. We also skip `registry,artifacts` since they would take a lot of space on backup. Read more on [official docs](https://docs.gitlab.com/ee/raketasks/backup_restore.html#backup-options).
+
+This is roughly the first part of [the topics I want to cover](https://twitter.com/developweekly/status/1190709245420953602?s=21) about our CI/CD system. I will announce it on twitter when I add new content here.
