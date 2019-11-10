@@ -10,6 +10,10 @@ This blog is generated with [Hugo](https://gohugo.io/), continuously deployed us
 
 # Latest Posts
 
+**Nov 10, 2019** [Gitlab CI/CD On Bare Metal](content/docs/gitlab-ci-cd-on-bare-metal.md)
+
+**Feb 9, 2019** [Your First Python Web Server](content/docs/your-first-webserver.md)
+
 **Jan 13, 2019** [Your First Dockerfile](content/docs/your-first-dockerfile.md)
 
 **Dec 16, 2018** [Highly Available NFS Server with Pacemaker & DRBD](content/docs/pacemaker.md)

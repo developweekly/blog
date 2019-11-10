@@ -2,8 +2,11 @@
 headless: true
 ---
 
+- **CI/CD**
+ - [Gitlab CI/CD On Bare Metal]({{< ref "/docs/gitlab-ci-cd-on-bare-metal.md" >}})
+
 - **Container**
- - [Your First Dockerfile]({{< ref "/docs/your-first-dockerfile.md" >}}) 
+ - [Your First Dockerfile]({{< ref "/docs/your-first-dockerfile.md" >}})
 
 - **File Server**
  - [Network File System (NFS)]({{< ref "/docs/setting-up-nfs.md" >}})
