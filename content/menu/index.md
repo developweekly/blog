@@ -2,6 +2,10 @@
 headless: true
 ---
 
+- **Python**
+ - [Your First Python Web Server]({{< ref "/docs/your-first-webserver.md" >}})
+ - [Version and Dependency Management]({{< ref "/docs/python-version-and-dependency-management.md" >}})
+
 - **CI/CD**
  - [Gitlab CI/CD On Bare Metal]({{< ref "/docs/gitlab-ci-cd-on-bare-metal.md" >}})
 
@@ -20,9 +24,6 @@ headless: true
 
 - **Networking**
  - [HAProxy]({{< ref "/docs/haproxy-load-balancing-and-subdomain-port-redirection.md" >}})
-
-- **Web Server**
- - [Your First Python Web Server]({{< ref "/docs/your-first-webserver.md" >}})
 
 - **Database**
  - [Redis]({{< ref "/docs/redis.md" >}})
