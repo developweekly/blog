@@ -1,7 +1,6 @@
 ---
 title: "Python Version and Dependency Management"
 date: 2020-04-12T12:05:22+03:00
-draft: true
 ---
 
 # Python Version and Dependency Management
@@ -28,7 +27,7 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 source ~/.bashrc
 ```
 
-Now you should be able to use `pyenv` command on terminal, if you can't, try opening a new terminal window. List your installed Python versions:
+Now you should be able to use `pyenv` command on terminal. List your installed Python versions:
 
 ```bash
 pyenv versions
@@ -107,11 +106,39 @@ pipenv install requests
 
 This will install `requests` package in your project environment, and add it to your Pipfile. It will also create a `Pipfile.lock` json formatted file, which will fix the version of all the dependencies of your project as well as file hashes for security reasons. This lock file can be reused when deploying this environment elsewhere to ensure both environments end up installing exactly same packages with correct versions and hashes.
 
-```bash
-cat Pipfile
+This is how Pipfile is updated after installing requests.
+
+```toml
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+
+[requires]
+python_version = "3.8"
 ```
 
-Now let's change Pipfile manually.
+Now let's change Pipfile manually and limit requests version to `<2.23.0`.
+
+```toml
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "<2.23.0"
+
+[requires]
+python_version = "3.8"
+```
 
 To manually trigger updating the lock file, we can run:
 
@@ -119,7 +146,7 @@ To manually trigger updating the lock file, we can run:
 pipenv lock
 ```
 
-And we can update installed packages by:
+Lock will fix requests package to version `"==2.22.0"`. We can sync installed packages by:
 
 ```bash
 pipenv install
@@ -136,6 +163,32 @@ Check installed packages in your environment:
 ```bash
 pipenv graph
 ```
+
+It will print the following output, which is from `pipdeptree` package actually: https://pypi.org/project/pipdeptree/
+
+```
+requests==2.22.0
+  - certifi [required: >=2017.4.17, installed: 2020.4.5.1]
+  - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+  - idna [required: >=2.5,<2.9, installed: 2.8]
+  - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.9]
+```
+
+If you have development dependencies such as `pytest`, you can add them under `dev-packages`.
+
+```bash
+pipenv install pytest --dev
+```
+
+When deploying your environment, you should add `Pipfile` and `Pipfile.lock` files within your project.
+
+```bash
+pipenv install --dev --deploy
+```
+
+`--deploy` argument will make install command fail if the Pipfile.lock is out-of-date, or Python version is wrong.
+
+If you would like your environment to be install on system-wide, you can add `--system` argument to install command as well.
 
 You can also spawn a new shell with this environment activated by `pyenv shell`. More details can be found by running just `pipenv`.
 

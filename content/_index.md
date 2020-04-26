@@ -6,9 +6,9 @@ type: docs
 # Hello!
 
 <a href="https://github.com/developweekly" style="margin-right: 16px">
-	  <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-  </a>
-  <a href="https://twitter.com/developweekly" style="margin-right: 16px">
+	<svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+<a href="https://twitter.com/developweekly" style="margin-right: 16px">
 	<svg viewBox="328 355 335 276" xmlns="http://www.w3.org/2000/svg" width="32">
 	<path d="
 		M 630, 425
@@ -28,15 +28,9 @@ type: docs
 		Z"
 		style="fill:#3BA9EE;"/>
 	</svg>
-  </a>
-  <a href="https://linkedin.com/in/safakulug" style="margin-right: 16px">
+</a>
+<a href="https://linkedin.com/in/safakulug" style="margin-right: 16px">
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" style="fill:#0077B5;"/></svg>
-  </a>
-  <a title="Instagram" href="https://instagram.com/developweekly" style="margin-right: 16px">
-    <img width="32" alt="Instagram simple icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Instagram_simple_icon.svg/512px-Instagram_simple_icon.svg.png" style="vertical-align: initial;">
-  </a>
-  <a title="twitch" href="https://www.twitch.tv/developweekly" style="margin-right: 16px">
-<svg style="fill: white; background-color: #6441a4;" class="tw-animated-glitch-logo__svg" overflow="visible" width="32px" height="32px" version="1.1" viewBox="0 0 30 30" x="0px" y="0px"><path d="M4,7 L5.56799,3 L27,3 L27,18 L21,24 L16,24 L12.88599,27 L9,27 L9,24 L4,24 L4,7 Z M21,20 L25,16 L25,5 L8,5 L8,20 L12,20 L12,23 L15,20 L21,20 Z"></path><polygon class="tw-animated-glitch-logo__right-eye" points="21 9 19 9 19 15 21 15"></polygon><polygon class="tw-animated-glitch-logo__left-eye" points="16 9 14 9 14 15 16 15"></polygon></svg>
 </a>
 
 I'm Safak, a software developer working at a fintech startup in Istanbul, Turkey.
@@ -48,6 +42,8 @@ I try to keep things simple to follow, up to date with continuous modifications,
 This blog is generated with [Hugo](https://gohugo.io/), continuously deployed using [Netlify](https://www.netlify.com/) and hosted on [https://github.com/developweekly/blog](https://github.com/developweekly/blog).
 
 # Latest Posts
+
+**Apr 12, 2020** [Python Version and Dependency Management]({{< ref "/docs/python-version-and-dependency-management.md" >}})
 
 **Nov 10, 2019** [Gitlab CI/CD On Bare Metal]({{< ref "/docs/gitlab-ci-cd-on-bare-metal.md" >}})
 
