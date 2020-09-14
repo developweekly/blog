@@ -5,7 +5,7 @@ date: 2020-04-12T12:05:22+03:00
 
 # Python Version and Dependency Management
 
-**Apr 12, 2020**
+**Apr 12, 2020**\
 <sup>Last modified: **Aug 23, 2020**</sup>
 
 This is yet another post regarding how to handle your Python working environment, or about the way I have been handling it for the past 5 years. There are probably other all-in-one solutions out there but I think on the long run, I find this setup simpler to scale and maintain.
