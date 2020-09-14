@@ -99,7 +99,7 @@ This is the very basic command to start a container with a defined image. It wil
 
 ```bash
 $ docker run -it --name mycontainer myimage:v0.0.1
-root@9ec80324ebeb:/# 
+root@9ec80324ebeb:/#
 ```
 
 This shows that you are logged in the container with ID `9ec80324ebeb` as `root` user. To detach from a container, you can use keyboard shortcut `Ctrl-p Ctrl-q`. Be careful, if you type `exit` or use `Ctrl-d` it does not just detach from the container but also stops it. To list running containers simply run the following command:
@@ -127,3 +127,13 @@ docker stop mycontainer
 ```
 
 This is the very basic of how to start a container using a Dockerfile. If you have any questions, I am more than happy to help.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

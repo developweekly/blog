@@ -114,3 +114,12 @@ backend beta_backend
 With this configuration, any request on `alpha.mydomain.com` on default HTTP port (`80`) will be redirected to `alpha_backend` which serves under the port `8000`. Also, any request on `beta.mydomain.com` on port `80` will be redirected to `beta_backend` which serves under the ports `8080` and `8081` using the algorithm called `roundrobin` where each server is used in turns. To see other balance options, you can check  [HAProxy Configuration Manual](//cbonte.github.io/haproxy-dconv/configuration-1.4.html#4.2-balance). To see if load balancing works, you can kill one of your `beta` servers and check that `beta.mydomain.com` is still up an running.
 
 You can also log HAProxy messages and even do a lot more with it! HAProxy is capable of much more of great features, but even these would suffice.
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

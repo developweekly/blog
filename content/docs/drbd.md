@@ -199,3 +199,12 @@ sudo mount /dev/drbd0 /srv
 ```
 
 Currently, the data is only served on the primary node, on path `/srv`. If we wanted it to be served on the secondary node, we'd have to unmount it from the primary, and make the drbd resource online and mount it on the secondary manually. To make it highly available, we still need to install and configure a Cluster Resource Manager called `pacemaker`. I will explain it in a different post.
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

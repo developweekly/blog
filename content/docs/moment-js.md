@@ -104,3 +104,13 @@ delta.minutes(); // returns 5
 ```
 
 By using all these features, I managed to calculate the time when the stock market opens or closes, and the time left until it opens or closes for a given arbitrary time. These are only a small fraction of what moment.js is capable of, if you feel like you need more of it, please visit its documentation page. I hope these will be useful for you as well, enjoy it!
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -321,3 +321,12 @@ backup:
 We are filtering `gitlab_web` container and running `gitlab-backup` command on it. We also skip `registry,artifacts` since they would take a lot of space on backup. Read more on [official docs](https://docs.gitlab.com/ee/raketasks/backup_restore.html#backup-options).
 
 This is roughly the first part of [the topics I want to cover](https://twitter.com/developweekly/status/1190709245420953602?s=21) about our CI/CD system. I will announce it on twitter when I add new content here.
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

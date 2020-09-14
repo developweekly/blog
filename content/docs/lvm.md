@@ -202,3 +202,13 @@ sudo lvremove /dev/ubuntu-vg/backup_snapshot
 ```
 
 This way, you can take backup of a live system without taking the service down or having to worry about file modifications during the backup.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
