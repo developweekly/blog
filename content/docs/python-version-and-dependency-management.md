@@ -194,3 +194,12 @@ If you would like your environment to be install on system-wide, you can add `--
 You can also spawn a new shell with this environment activated by `pyenv shell`. More details can be found by running just `pipenv`.
 
 Now you can work on bunch of independent projects with their unique working environment and project specific dependencies.
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

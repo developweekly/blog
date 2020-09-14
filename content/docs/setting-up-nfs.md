@@ -99,7 +99,7 @@ And docker volume `nfs` is mounted with driver options:
   - `proto` is **tcp**, and `port` is **2049** for NFSv4
   - `addr` is IP address of NFS server
   - `rw` is for read/write permissions
-  
+
 ```yaml
 volumes:
   nfs:
@@ -109,3 +109,13 @@ volumes:
       device: ":/export/mydata"
       o: "addr=192.168.7.140,rw,proto=tcp,port=2049"
 ```
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

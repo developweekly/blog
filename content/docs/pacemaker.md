@@ -7,7 +7,7 @@ title: "Highly Available NFS Server with Pacemaker & DRBD"
 **Dec 16, 2018**<!-- \ -->
 <!-- <sup>Last modified: **Dec 2, 2018**</sup> -->
 
-Although containers provide a lot of flexibility, managing the state is not a problem with straight-forward solution on a distributed system. I will help you set up a highly available network file system with replication on multiple hosts. 
+Although containers provide a lot of flexibility, managing the state is not a problem with straight-forward solution on a distributed system. I will help you set up a highly available network file system with replication on multiple hosts.
 
 We will install NFS Server on both nodes and have Pacemaker control the service, while replication occurs via DRBD (Distributed Replicated Block Device) in the background. You need to have a DRBD resource up and running on both nodes, if not, you can see my other post about installing and configuring DRBD.
 
@@ -496,4 +496,14 @@ You can now test the same scenario, but with a larger file. And before the write
 
 If you experience any hick up, you can umount with `sudo umount -l /mnt` and try mounting again. Sometimes the lag between switching two nfs servers is longer than the grace period parameter you've set.
 
-If I were you, I would test this setup for a while before migrating all my data to it. It is looks like a nice setup but may not be as performant as you expect under heavy network loads. I am planning to move the state of a Docker Swarm Cluster to a HA-NFS cluster like this and mount docker volumes via nfs but I am still concerned about the performance and agility of an automatic failing over. Still, it was a nice exercise for me to understand `corosync` and `pacemaker` as well as tweaking with `nfsd` on different versions of ubuntu. 
+If I were you, I would test this setup for a while before migrating all my data to it. It is looks like a nice setup but may not be as performant as you expect under heavy network loads. I am planning to move the state of a Docker Swarm Cluster to a HA-NFS cluster like this and mount docker volumes via nfs but I am still concerned about the performance and agility of an automatic failing over. Still, it was a nice exercise for me to understand `corosync` and `pacemaker` as well as tweaking with `nfsd` on different versions of ubuntu.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

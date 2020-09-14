@@ -90,3 +90,13 @@ print(response.text)
 ```
 
 You can't send a POST request using browser directly afaik unless you are using Firefox. But it's possible to do so using Postman, or Javascript.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -76,3 +76,13 @@ con.lrange("key", 0, -1)
 ```
 
 That's just about it! There are other commands for sets, managing queue lists, hashes, publish/subscribe messaging and so on in <a href="http://redis.io/commands" target="_blank">the command reference</a>.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="developweekly/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
