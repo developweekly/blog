@@ -2,7 +2,7 @@
 
 baseURL: https://developweekly.com
 title: developweekly
-theme: hugo-book
+theme: book
 
 # for syntax highlighting
 pygmentsCodeFences: true
