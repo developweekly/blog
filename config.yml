@@ -1,6 +1,6 @@
 # hugo server --themesDir ...
 
-baseURL: https://developweekly.com
+baseURL: https://developweekly.netlify.app/
 title: developweekly
 theme: book
 
